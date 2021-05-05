@@ -1,13 +1,16 @@
 <h1>Books</h1>
 <table>
   <tr>
+    <th></th>
     <th>Title</th>
     <th>Opinion</th>
   </tr>
   <% @books.each do |book| %>
     <tr>
-      <td><p><%= book.title %></p></td>
+      <td><%= attachment_image_tag book.user, :profile_image, format: 'jpeg', fallback: "no_image.jpg", size: "100x100" %></td>
+      <td><p><%= link_to book.title, book_path(book) %></p></td>
       <td><p><%= book.body %></p></td>
+
     </tr>
   <% end %>
 </table>

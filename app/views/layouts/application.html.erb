@@ -18,7 +18,8 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <% if user_signed_in? %>
             <ul class="navbar-nav ml-auto">
-              <li><a class="fas fa-home nav-item nav-link active" href="#"> Home</a></li>
+              <li><%= link_to "Home", user_path(current_user), class:"fas fa-home nav-item nav-link active" %></li>
+              <!--<li><a class="fas fa-home nav-item nav-link active" href="#"> Home</a></li>-->
               <li><%= link_to "Users", "#", class:"fas fa-users nav-item nav-link active" %></li>
               <li><%= link_to "Books", books_path , class:"fas fa-book-open nav-item nav-link active" %></li>
               <li><%= link_to "log out", destroy_user_session_path, method: :delete, class:"fas fa-sign-out-alt nav-item nav-link active" %></li>
