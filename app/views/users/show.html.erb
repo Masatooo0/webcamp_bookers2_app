@@ -1,12 +1,5 @@
-<h1>User Info</h1>
-<div class="profile-container">
-   <%= attachment_image_tag @user, :profile_image, format: 'jpeg', fallback: "no_image.jpg", size: "100x100" %>
-  <h4 class="profile-name">name<%= @user.name %></h4>
-  <h4 class="profile-introduction">introduction<%= @user.introduction %></h4>
-</div>
-<% if @user.id == current_user.id %>
- <p><%= link_to 'プロフィール編集', edit_user_path(@user) %></p>
- <% end %>
+<%= render 'users/userinfo', user: @user %>
+<%= render 'books/new', book: @book %>
 <table>
   <tr>
     <th>Title</th>
@@ -20,3 +13,4 @@
   <% end %>
 </table>
 <%= paginate @books %>
+
