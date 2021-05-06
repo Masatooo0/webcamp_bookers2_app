@@ -1,15 +1,16 @@
 <h2>User Info</h2>
-<div class="profile-container">
-   <%= attachment_image_tag user, :profile_image, format: 'jpeg', fallback: "no_image.jpg", size: "100x100" %>
-   <table>
-     <tr>
-       <th>name</th>
-       <td><%= user.name %></td>
-      </tr>
-      <tr>
-        <th>introduction</th>
-        <td><%= user.introduction %></td>
-      </tr>
-   </table>
-</div>
- <p><%= link_to 'プロフィール編集', edit_user_path(current_user) %></p>
+<%= attachment_image_tag user, :profile_image, format: 'jpeg', fallback: "no_image.jpg", size: "100x100" %>
+<table>
+ <tr>
+   <th>name</th>
+   <td><%= user.name %></td>
+  </tr>
+  <tr>
+    <th>introduction</th>
+    <td><%= user.introduction %></td>
+  </tr>
+</table>
+<%= link_to edit_user_path(current_user),class:"btn btn-outline-secondary btn-block btn-sm my-4" do %>
+    <i class="fas fa-user-cog"></i>
+<% end %>
+

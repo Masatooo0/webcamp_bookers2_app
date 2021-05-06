@@ -1,4 +1,6 @@
 class BooksController < ApplicationController
+  before_action :correct_user, only: [:new, :create, :edit, :update, :destroy]
+
 
   def index
     @book = Book.new
@@ -25,10 +27,12 @@ class BooksController < ApplicationController
     @user = @book.user
   end
   def edit
+    @book.user = current_user
     @book = Book.find(params[:id])
   end
 
   def update
+    @book.user = current_user
     @book = Book.find(params[:id])
     if @book.update(book_params)
       flash[:notice]="Book was successfully updated."
@@ -40,12 +44,21 @@ class BooksController < ApplicationController
 
   def destroy
     @book = Book.find(params[:id])
-    @book.destroy
-    redirect_to books_path
+    if @book.destroy
+      flash[:notice]="Book was successfully destroyed."
+      redirect_to books_path
+    end
   end
   private
 
   def book_params
     params.require(:book).permit(:title, :body)
+  end
+  def correct_user
+     book = Book.find(params[:id])
+     # belong_toのおかげでnoteオブジェクトからuserオブジェクトへアクセスできる。
+     if current_user.id = book.user.id
+       redirect_to books_path
+     end
   end
 end
