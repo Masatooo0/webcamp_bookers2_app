@@ -17,4 +17,31 @@
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
 
+// ↓ナビゲーションバー↓
+.navbar-brand{
+  margin-left:160px;
+}
+.navbar-nav{
+  margin-right:160px;
+}
 
+// ↓トップページ↓
+.container{
+  margin-top:20px;
+}
+
+.btn-login{
+  color:#fff;
+  background-color:#17a2b8;
+}
+.btn-signup{
+  color:#fff;
+  background-color:#28A845;
+}
+
+// ↓signupページ↓
+
+footer{
+  margin-top:50px;
+  text-align:center;
+}
