@@ -1,0 +1,6 @@
+<% if model.errors.any? %>
+  <%= model.errors.count %>errors prohibited this obj from being saved:
+  <% model.errors.full_messages.each do |message| %>
+    <%= message %>
+  <% end %>
+<% end %>
