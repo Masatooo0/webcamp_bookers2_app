@@ -1,9 +1,24 @@
 <%= flash[:notice] %>
-<%= render 'users/userinfo', user: @user %>
-<%= render 'books/new', book: @newbook %>
 
-<%= attachment_image_tag @book.user, :profile_image, format: 'jpeg', fallback: "no_image.jpg", size: "100x100" %>
-<%= @book.title %>
-<%= @book.body %>
-<%= link_to 'Edit', edit_book_path(@book) %>
-<%= link_to 'Delete', book_path(@book), method: :delete %>
+<div class="container px-5 px-sm-0">
+  <div class="row">
+    <div class="col-md-3">
+      <%= render 'users/userinfo', user: @user %>
+      <%= render 'books/new', book: @newbook %>
+    </div>
+    <div class="col-md-8 offset-md-1">
+      <h2>Book detail</h2>
+      <table>
+        <tbody>
+          <td><%= attachment_image_tag @book.user, :profile_image, format: 'jpeg', fallback: "no_image.jpg", size: "40x40" %></td>
+          <td><%= @book.title %></td>
+          <td><%= @book.body %></td>
+          <td><%= link_to 'Edit', edit_book_path(@book) %></td>
+          <td><%= link_to 'Delete', book_path(@book), method: :delete %></td>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
