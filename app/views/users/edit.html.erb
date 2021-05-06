@@ -1,11 +1,17 @@
-<h1>User Info</h1>
-<%= render 'books/error', model:@user %>
-<%= form_with model:@user, local:true do |f| %>
-  <p>Name</p>
-  <%= f.text_field:name %>
-  <label for="inputImage">Image</label>
-  <%= f.attachment_field :profile_image, placeholder: "プロフィール画像" %>
-  <p>Introduction</p>
-  <%= f.text_area:introduction %>
-  <%= f.submit 'Update User' %>
-<% end %>
+  <div class="container">
+    <div class="row">
+      <div class="mx-auto col-11 col-sm-10 col-lg-8 col-xl-6">
+        <h2>User Info</h2>
+        <%= render 'books/error', model:@user %>
+        <%= form_with model:@user, local:true do |f| %>
+          <%= f.label :name, 'Name',class:"form-label" %>
+          <%= f.text_field:name, class:"form-control mb-3" %>
+          <%= f.label :profile_image, 'Image',class:"form-label" %>
+          <%= f.attachment_field :profile_image, placeholder: "プロフィール画像", class:"form-control-file mb-3" %>
+          <%= f.label :introduction, 'Introduction',class:"form-label" %>
+          <%= f.text_area:introduction, class:"form-control mb-3" %>
+          <%= f.submit 'Update User', class:"btn btn-secondary" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
