@@ -1,5 +1,6 @@
+<%= flash[:notice] %>
 <%= render 'users/userinfo', user: @user %>
-<%= render 'books/new', book: @newb %>
+<%= render 'books/new', book: @newbook %>
 
 <%= attachment_image_tag @book.user, :profile_image, format: 'jpeg', fallback: "no_image.jpg", size: "100x100" %>
 <%= @book.title %>
