@@ -1,7 +1,5 @@
 class BooksController < ApplicationController
-  before_action :correct_user, only: [:new, :create, :edit, :update, :destroy]
-
-
+  before_action :baria_user, only: [:edit, :destroy, :update]
   def index
     @book = Book.new
     @books = Book.all
@@ -26,13 +24,15 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
     @user = @book.user
   end
+  
   def edit
-    @book.user = current_user
     @book = Book.find(params[:id])
+    if @book.user != current_user
+      render books_path
+    end
   end
-
+  
   def update
-    @book.user = current_user
     @book = Book.find(params[:id])
     if @book.update(book_params)
       flash[:notice]="Book was successfully updated."
@@ -49,16 +49,17 @@ class BooksController < ApplicationController
       redirect_to books_path
     end
   end
+
   private
 
   def book_params
     params.require(:book).permit(:title, :body)
   end
-  def correct_user
-     book = Book.find(params[:id])
-     # belong_toのおかげでnoteオブジェクトからuserオブジェクトへアクセスできる。
-     if current_user.id = book.user.id
-       redirect_to books_path
-     end
+
+  def baria_user
+    unless Book.find(params[:id]).user.id.to_i == current_user.id
+        redirect_to books_path
+    end
   end
+
 end
