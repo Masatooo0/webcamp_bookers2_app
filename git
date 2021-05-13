@@ -1,0 +1,101 @@
+[33mcommit 79db9a61610ec64a8f825ce83a8a31a54936f3e7[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: “Masatooo0” <“masato.n.0321@gmail.com”>
+Date:   Fri May 7 04:32:29 2021 +0000
+
+    [fix]テストエラー修正
+
+[33mcommit b4a1906a04a15c578065ebef2f702ba3e4575886[m
+Author: “Masatooo0” <“masato.n.0321@gmail.com”>
+Date:   Thu May 6 12:57:07 2021 +0000
+
+    [add]ユーザー認証機能仕上げ
+
+[33mcommit 20b9def483b0da0d772d5b8ef1e078cf8db277ff[m
+Author: “Masatooo0” <“masato.n.0321@gmail.com”>
+Date:   Thu May 6 08:08:22 2021 +0000
+
+    [edit]フォームレイアウト修正
+
+[33mcommit cd35c393b3df59c756376a75df28c11c756cbe14[m
+Author: “Masatooo0” <“masato.n.0321@gmail.com”>
+Date:   Thu May 6 07:08:57 2021 +0000
+
+    [edit]レイアウト編集
+
+[33mcommit b6213ba01e54f00da186d46a44d067404b9c90be[m
+Author: “Masatooo0” <“masato.n.0321@gmail.com”>
+Date:   Thu May 6 05:20:55 2021 +0000
+
+    [edit]Signupページbootstrap対応
+
+[33mcommit 87ca0a845699b99f7fd74ba75f71ddac348784d4[m
+Author: “Masatooo0” <“masato.n.0321@gmail.com”>
+Date:   Thu May 6 01:47:05 2021 +0000
+
+    [edit]バリテーション部分テンプレート化
+
+[33mcommit 488287fc8b1e2db3e3681917db85f363d08c8035[m
+Author: “Masatooo0” <“masato.n.0321@gmail.com”>
+Date:   Thu May 6 01:32:11 2021 +0000
+
+    [add]本編集画面バリテーション
+
+[33mcommit 990ab708307a8c8bb7ec78ff20d8ad3fc791872d[m
+Author: “Masatooo0” <“masato.n.0321@gmail.com”>
+Date:   Thu May 6 01:17:12 2021 +0000
+
+    [add]バリテーション
+
+[33mcommit 9a5a738573413e4c42b17aed8fd87f2987389521[m
+Author: “Masatooo0” <“masato.n.0321@gmail.com”>
+Date:   Thu May 6 00:28:39 2021 +0000
+
+    [add部分テンプレート
+
+[33mcommit 9b6d1c2e984a8c373443fd711d354a4a7999c2c4[m
+Author: “Masatooo0” <“masato.n.0321@gmail.com”>
+Date:   Wed May 5 13:29:51 2021 +0000
+
+    [add]部分テンプレート
+
+[33mcommit 317a5e2e1f43f64582f84a36500bee4308822e9a[m
+Author: “Masatooo0” <“masato.n.0321@gmail.com”>
+Date:   Wed May 5 12:50:13 2021 +0000
+
+    [add]ユーザーページ
+
+[33mcommit 1be3a0e2b8afd4b41b7f4eae2bc93afc25800947[m
+Author: “Masatooo0” <“masato.n.0321@gmail.com”>
+Date:   Wed May 5 08:44:52 2021 +0000
+
+    [add]投稿機能
+
+[33mcommit 6b2a1374293a4fea5c3722b354b5e412ad91ea81[m
+Author: “Masatooo0” <“masato.n.0321@gmail.com”>
+Date:   Wed May 5 05:14:26 2021 +0000
+
+    [add]refile,refile-mini_magick
+
+[33mcommit 116f18226d3d5ab3c1254707e4d759858ed5effd[m
+Author: “Masatooo0” <“masato.n.0321@gmail.com”>
+Date:   Wed May 5 05:07:59 2021 +0000
+
+    [edit]navbar
+
+[33mcommit 1ae727debb8f26bbcf09326f72dadebc8ffdc856[m
+Author: “Masatooo0” <“masato.n.0321@gmail.com”>
+Date:   Wed May 5 02:52:40 2021 +0000
+
+    [add]トップページ
+
+[33mcommit 180723c2442583af7b18f7c1120f811943dc9bcf[m
+Author: “Masatooo0” <“masato.n.0321@gmail.com”>
+Date:   Wed May 5 02:04:13 2021 +0000
+
+    [add]devise
+
+[33mcommit 823f2a59bebe9c6b6b8c792da226af7c1f8daaf1[m
+Author: “Masatooo0” <“masato.n.0321@gmail.com”>
+Date:   Tue May 4 12:29:15 2021 +0000
+
+    [start]bookers2
