@@ -25,6 +25,7 @@
              </td>
               <td><p><%= link_to book.title, book_path(book) %></p></td>
               <td><p><%= book.body %></p></td>
+              <td><%= render 'favorite', book: book %></td>
             </tr>
           </tbody>
         <% end %>
