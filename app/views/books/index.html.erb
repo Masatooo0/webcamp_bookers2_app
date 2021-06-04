@@ -22,10 +22,11 @@
                 <%= link_to user_path(book.user) do %>
                   <%= attachment_image_tag book.user, :profile_image, format: 'jpeg', fallback: "no_image.jpg", size: "40x40" %><br />
                 <% end %>
-             </td>
+              </td>
               <td><p><%= link_to book.title, book_path(book) %></p></td>
               <td><p><%= book.body %></p></td>
               <td><%= render 'favorite', book: book %></td>
+              <td>コメント数：<%= book.book_comments.count %></td>
             </tr>
           </tbody>
         <% end %>
