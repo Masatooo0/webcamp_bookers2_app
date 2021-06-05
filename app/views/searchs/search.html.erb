@@ -1,0 +1,45 @@
+<% if @range == '1' %>
+  <h2>Users search for <%= params[:word] %></h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>image</th>
+        <th>name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @user.each do |user| %>
+      <tr>
+        <td>
+          <%= attachment_image_tag user, :profile_image, format: 'jpeg', fallback: "no_image.jpg", size: "40x40" %><br />
+        </td>
+        <td><%= user.name %></td>
+        <td><%= link_to 'show', user_path(user) %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <h2>Books search for <%= params[:word] %></h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>image</th>
+        <th>title</th>
+        <th>opinion</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @book.each do |book| %>
+        <tr>
+          <td>
+            <%= attachment_image_tag book.user, :profile_image, format: 'jpeg', fallback: "no_image.jpg", size: "40x40" %><br />
+          </td>
+          <td><%= book.title %></td>
+          <td><%= book.body %></td>
+          <td><%= link_to 'show', user_path(book.user) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>

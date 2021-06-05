@@ -11,7 +11,7 @@ class User < ApplicationRecord
   attachment :profile_image
   validates :name, presence: true, uniqueness: true, length: {minimum: 2, maximum: 20}
   validates :introduction, length: {maximum: 50}
-  
+
   has_many :reverse_of_relationships, class_name: "Relationship", foreign_key: "followed_id", dependent: :destroy
   # 自分がフォローする（与フォロー）側の関係性
   has_many :relationships, class_name: "Relationship", foreign_key: "follower_id", dependent: :destroy
@@ -19,7 +19,7 @@ class User < ApplicationRecord
   has_many :followers, through: :reverse_of_relationships, source: :follower
   # 与フォロー関係を通じて参照→自分がフォローしている人
   has_many :followings, through: :relationships, source: :followed
-  
+
   def follow(user_id)
     relationships.create(followed_id: user_id)
   end
@@ -30,5 +30,19 @@ class User < ApplicationRecord
 
   def following?(user)
     followings.include?(user)
+  end
+
+  def self.search(search,word)
+    if search == "forword_match"
+      User.where(["name LIKE?", "#{word}%"])
+    elsif search == "backword_match"
+      User.where(["name LIKE?", "%#{word}"])
+    elsif search == "perfect_match"
+      User.where(name: word)
+    elsif search == "partial_match"
+      User.where(["name LIKE?", "%#{word}%"])
+    else
+      User.all
+    end
   end
 end
